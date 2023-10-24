@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
+############################################################################################ SOFTMAX Trials 3
 """ It must be RUN from terminal with following command (change parameters as you like): 
         $python softmax_trial_3.py -e 5 -lr 0.05 -bs 20 -r 0.001 -m 0.1
 """
