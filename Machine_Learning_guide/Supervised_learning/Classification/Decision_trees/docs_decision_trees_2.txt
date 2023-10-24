@@ -1,0 +1,59 @@
+
+Method: check_is_leaf
+ Check if a node is a leaf. 
+        In sklearn's decision trees, each node in the tree is represented by an index value.
+
+Parameters:
+    - Inner tree object [sklearn.tree._tree.Tree].
+    - Index of the node to check [int].
+
+Returns:
+    True if the node is a leaf, False otherwise [bool].
+    
+
+----------------------------------------------------------------------------------------------------
+
+
+Method: prune_index
+ Prune the tree, removing nodes, from the bottom. \
+
+Parameters:
+    - Inner tree object [sklearn.tree._tree.Tree]
+    - List of decisions for each node.
+    - Index of the current node. [int, optional]
+
+Details: 
+    - Start from the bottom to avoid that the nodes that become leaves during pruning will be wrongly classified.
+    - Prune children if both children are leaves now and make the same decision.
+    - Turn node into a leaf by "unlinking" its children:
+        TREE_LEAF is a scikit-learn constant that represents the value used to indicate that a node in the decision tree is a leaf node. \
+        By convention, TREE_LEAF is set to -1 in scikit-learn's implementation. \
+        If the children_left and children_right arrays of a node both have the value TREE_LEAF at that index, \
+            it indicates that the node is a leaf node, meaning it does not have any child nodes.
+
+Notes: 
+    Called by "prune_duplicate_leaves".
+    
+
+----------------------------------------------------------------------------------------------------
+
+
+Method: prune_duplicate_leaves
+ Compute the decisions (labels) for each node in the decision tree model and then remove leaves if both decisions are the same.
+
+Parameters:
+    mdl -> The decision tree classifier model [sklearn.tree.DecisionTreeClassifier].
+
+Details: 
+    - Get the class labels (decisions) for each node in the decision tree model.
+        - Access the value attribute of the decision tree model's inner tree structure \
+            (the counts of samples in each class for each node in the tree).
+        - Compute the index of the max val along the third axis (2), \
+            to find the index corresponding to the class with the highest count for each node.
+        - Flatten the resulting array, converting it from a multidimensional to a one-dimensional array.
+        - Convert into a list.
+    - Prune the tree
+    
+
+----------------------------------------------------------------------------------------------------
+

@@ -1,0 +1,26 @@
+   lev_beginner  comple_Easy  s1_no  s2_no  s3_no  s3_Easy_1  m2_diff_Easy_1  \
+0             0            0      0      0      0          0               0   
+
+   m3_diff_Easy_1  m3_diff_Easy_2  m3_diff_Hard_1  m3_diff_Hard_2  \
+0               1               0               0               0   
+
+   m3_diff_Medium_1  m3_diff_Medium_2  m3_diff_Normal_1  m3_diff_Normal_2  \
+0                 0                 0                 0                 0   
+
+   m4_diff_Easy_1  m4_diff_Easy_2  m4_diff_Hard_1  m4_diff_Hard_2  \
+0               1               0               0               0   
+
+   m4_diff_Medium_1  m4_diff_Medium_2  m4_diff_Normal_1  m4_diff_Normal_2  \
+0                 0                 0                 0                 0   
+
+   m5_diff_Easy_1  ord_q_games_asc  ord_q_games_casu  ord_q_games_desc  \
+0               0                0                 0                 0   
+
+   ord_q_games_same  a1_AAAA  a1_ABAA  a1_BAAA  a1_BBAA  a1_BBBA  a1_BBBB  \
+0                 1        1        0        0        0        0        0   
+
+   a1_BCBA  a1_BCBB  a1_CBAA  a1_CBBA  a1_CBCB  a1_CCBB  a1_CCBC  a1_CCCB  \
+0        0        0        0        0        0        0        0        0   
+
+   a1_CCCC  n1_no  n2_no  n2  
+0        0      0      0   0  
